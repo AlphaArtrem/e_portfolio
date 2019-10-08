@@ -121,7 +121,7 @@ nav ul a {
 
 .row {
   width: 100%;
-  max-width: 940px;
+  max-width: 80%;
   margin: 0 auto;
   position: relative;
   padding: 0 2%;
@@ -160,12 +160,28 @@ p {
   padding: 50px 2% 250px;
 }
 
-.hero {
+.hero_img
+{
   position: relative;
-  background: #333 url(http://srdjanpajdic.com/slike/2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.hero_blur{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+ -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   text-align: center;
   color: #fff;
   padding-top: 110px;
@@ -173,6 +189,7 @@ p {
   letter-spacing: 2px;
   font-family: "Montserrat", sans-serif;
 }
+
 .hero h1 {
   font-size: 50px;
   line-height: 1.3;
@@ -185,59 +202,114 @@ p {
   line-height: 3;
 }
 
-.mouse {
-  display: block;
-  margin: 0 auto;
-  width: 26px;
-  height: 46px;
-  border-radius: 13px;
-  border: 2px solid #e8f380;
-  bottom: 40px;
-  position: absolute;
-  left: 50%;
-  margin-left: -14px;
-}
-.mouse span {
-  display: block;
-  margin: 6px auto;
-  width: 2px;
-  height: 2px;
-  border-radius: 4px;
-  background: #e8f380;
-  border: 1px solid transparent;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: scroll;
-  animation-name: scroll;
+
+#profile_img{
+  border-radius: 50%;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
 }
 
-@-webkit-keyframes scroll {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
+.social_icon{
+  width: 40px;
 }
-@keyframes scroll {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-  }
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 3%;
+}
+
+/*skills*/
+
+:root {
+	text-align: center;
+}
+
+.avatar-container {
+	position: relative;
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	height: 130px;
+	width: 130px;
+	padding: 0;
+	margin: 0 1rem;
+	border: none;
+	background: #efefef;
+	cursor: pointer;
+}
+
+.avatar-container .avatar {
+	display: block;
+	margin: 15px;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	z-index: 100;
+}
+
+.avatar-container .avatar img {
+	width: 100%;
+	height: auto;
+}
+
+.avatar-container .info {
+	display: none;
+	font-weight: bold;
+	font-size: 2rem;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 187, 255, 0.2);
+	color: white;
+	z-index: 1000;
+}
+
+.avatar-container .info.js-active {
+	display: table;
+}
+
+.avatar-container .info .info-inner {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.avatar-container:hover{
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.p-70 {
+	background-image: linear-gradient(-18deg, #0BF 50%, transparent 50%, transparent), linear-gradient(270deg, #0BF 50%, #efefef 50%, #efefef);
+}
+
+
+.p-75 {
+	background-image: linear-gradient(0deg, #0BF 50%, transparent 50%, transparent), linear-gradient(270deg, #0BF 50%, #efefef 50%, #efefef);
+}
+
+.p-80 {
+	background-image: linear-gradient(18deg, #0BF 50%, transparent 50%, transparent), linear-gradient(270deg, #0BF 50%, #efefef 50%, #efefef);
+}
+
+.p-85 {
+	background-image: linear-gradient(36deg, #0BF 50%, transparent 50%, transparent), linear-gradient(270deg, #0BF 50%, #efefef 50%, #efefef);
+}
+
+.p-90 {
+	background-image: linear-gradient(54deg, #0BF 50%, transparent 50%, transparent), linear-gradient(270deg, #0BF 50%, #efefef 50%, #efefef);
+}
+
+.p-95 {
+	background-image: linear-gradient(72deg, #0BF 50%, transparent 50%, transparent), linear-gradient(270deg, #0BF 50%, #efefef 50%, #efefef);
+}
+
+.p-100 {
+	background-image: linear-gradient(90deg, #0BF 50%, transparent 50%, transparent), linear-gradient(270deg, #0BF 50%, #efefef 50%, #efefef);
 }
